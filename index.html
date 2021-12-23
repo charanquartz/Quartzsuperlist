@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    <title>Superlist</title>
+    <meta name="description" content="We're building the productivity tool of the future: for teams and individuals alike">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Superlist">
+    <meta property="og:description" content="We're building the productivity tool of the future: for teams and individuals alike">
+    <meta property="og:url" content="https://quartz.charanquartz.me/">
+    <meta property="og:site_name" content="Superlist">
+    <meta property="og:image" content="https://quartz.charanquartz.me/images/social-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#191919">
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#191919">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ED4439">
+  <link href="/css/style.css" rel="stylesheet"></head>
+
+  <body data-aside-open="false" data-page="home">
+
+    <div class="cookie-banner p3" data-component="cookie" data-visible="false">
+  This website uses cookies. <a class="cookie-banner__link" href="/privacy.html" target="_blank" aria-label="Learn more about our privacy policy."><span aria-hidden="true">Learn more</span></a>
+  <button class="cookie-banner__btn p3" aria-label="Dismiss cookie notice">Okay</button>
+</div>
+    <div class="loader">
+    <div>
+        <svg class="js-loader-svg" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <clipPath id="loader-clip">
+            <rect x="0" y="100%" width="100%" height="100%" class="js-loader-fill"></rect>
+            </clipPath>
+        </defs>
+        <path class="loader__grey" d="M13.034 1.06711L11.5255 7.4563C11.5009 7.55928 11.5461 7.66639 11.6324 7.71994L20.4861 13.3594C21.1355 13.7755 21.1766 14.7106 20.5683 15.1802L15.7633 18.8753L9.33472 23.8186C8.68939 24.3129 7.781 23.7238 7.97008 22.9329L9.47858 16.5437C9.50324 16.4407 9.45803 16.3336 9.37171 16.2801L0.513899 10.6406C-0.135536 10.2245 -0.17664 9.28943 0.431692 8.81982L5.23669 5.12472L11.6653 0.181434C12.3106 -0.312894 13.219 0.276181 13.034 1.06711Z"></path>
+        <path class="loader__orange" clip-path="url(#loader-clip)" d="M13.034 1.06711L11.5255 7.4563C11.5009 7.55928 11.5461 7.66639 11.6324 7.71994L20.4861 13.3594C21.1355 13.7755 21.1766 14.7106 20.5683 15.1802L15.7633 18.8753L9.33472 23.8186C8.68939 24.3129 7.781 23.7238 7.97008 22.9329L9.47858 16.5437C9.50324 16.4407 9.45803 16.3336 9.37171 16.2801L0.513899 10.6406C-0.135536 10.2245 -0.17664 9.28943 0.431692 8.81982L5.23669 5.12472L11.6653 0.181434C12.3106 -0.312894 13.219 0.276181 13.034 1.06711Z"></path>
+        </svg>
+    </div>
+</div>
+    <header class="header" data-visible="false" data-nav-theme="light" data-shrink="false" data-panel-theme="dark">
+  <div class="container header__container">
+    <div class="header__col header__nav-wrap">
+      <a class="header__home-link" href="#hero" aria-label="Back to top">
+        <svg viewBox="0 0 143 34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M65.2617842,11.7293 C66.0485842,10.262 67.2434842,9.05397 68.7020842,8.2512 C70.1754842,7.43281 71.8815842,7.02362 73.8202842,7.02362 C75.7848842,7.02362 77.5162842,7.40755 79.0143842,8.17542 C80.4694842,8.90403 81.6878842,10.0307 82.5278842,11.4245 C83.3697842,12.8222 83.8042842,14.4654 83.8313365,16.3542 C83.8337842,16.8385 83.8030842,17.3223 83.7394842,17.8024 C83.7256842,17.904 83.6753842,17.9971 83.5978842,18.0642 C83.5203842,18.1313 83.4209842,18.1679 83.3184842,18.167 L69.5877842,18.167 L69.5877842,18.3185 C69.7134842,19.7291 70.1667842,20.8371 70.9475842,21.6426 C71.7283842,22.448 72.7984842,22.8511 74.1579842,22.8516 C75.2406842,22.8516 76.1410842,22.6187 76.8589842,22.1528 C77.4970842,21.7384 77.9686842,21.1124 78.1909842,20.3847 C78.2176842,20.2998 78.2705842,20.2255 78.3420842,20.1725 C78.4136842,20.1196 78.5001842,20.0907 78.5891842,20.09 L83.0153842,20.09 C83.0786842,20.0898 83.1412842,20.1039 83.1983842,20.1312 C83.2554842,20.1586 83.3056842,20.1985 83.3452842,20.2479 C83.3848842,20.2974 83.4127842,20.3551 83.4268842,20.4168 C83.4410842,20.4785 83.4411842,20.5427 83.4270842,20.6044 C83.1896842,21.6824 82.7207842,22.6959 82.0529842,23.5749 C81.2721842,24.6082 80.2396842,25.4204 78.9554842,26.0115 C77.6711842,26.6025 76.1979842,26.8984 74.5359842,26.8989 C72.3693842,26.8989 70.4993842,26.4959 68.9259842,25.6899 C67.3967842,24.9265 66.1330842,23.72 65.2996842,22.2277 C64.4577842,20.7302 64.0367789,18.9862 64.0367789,16.9958 C64.0350842,14.9829 64.4433842,13.2275 65.2617842,11.7293 Z M78.5024842,14.6947 C78.3256842,13.5109 77.8406842,12.598 77.0475842,11.9558 C76.2543842,11.3137 75.2535842,10.9926 74.0450842,10.9926 C72.8865842,10.9926 71.9107842,11.3263 71.1176842,11.9937 C70.3244842,12.6611 69.8521842,13.5614 69.7005842,14.6947 L78.5024842,14.6947 Z"></path>
+          <path d="M40.2875842,7.25262 L35.8033842,7.25262 C35.6916842,7.25262 35.5845842,7.29698 35.5056842,7.37593 C35.4266842,7.45488 35.3823842,7.56195 35.3823842,7.6736 L35.3823842,16.8097 C35.3823842,18.598 35.0174842,19.9895 34.2877842,20.9841 C33.5580842,21.9788 32.5252842,22.4775 31.1893842,22.4803 C29.9056842,22.4803 28.9550842,22.0332 28.3376842,21.1391 C27.7202842,20.2449 27.4114842,18.9166 27.4114842,17.1541 L27.4114842,7.6736 C27.4114842,7.56195 27.3671842,7.45488 27.2881842,7.37593 C27.2092842,7.29698 27.1021842,7.25262 26.9905842,7.25262 L22.5070842,7.25262 C22.3954842,7.25262 22.2883842,7.29698 22.2094842,7.37593 C22.1304842,7.45488 22.0861842,7.56195 22.0861842,7.6736 L22.0861842,17.7923 C22.0861842,21.0658 22.8037842,23.4014 24.2389842,24.7991 C25.6742842,26.1967 27.5251842,26.8955 29.7917842,26.8955 C31.1012842,26.8955 32.2092842,26.669 33.1157842,26.2161 C33.9785842,25.7819 34.7484842,25.1836 35.3823842,24.4547 L35.3823842,26.2481 C35.3823842,26.3597 35.4266842,26.4668 35.5056842,26.5457 C35.5845842,26.6247 35.6916842,26.669 35.8033842,26.669 L40.2875842,26.669 C40.3992842,26.669 40.5063842,26.6247 40.5852842,26.5457 C40.6642842,26.4668 40.7085842,26.3597 40.7085842,26.2481 L40.7085842,7.6736 C40.7085842,7.56195 40.6642842,7.45488 40.5852842,7.37593 C40.5063842,7.29698 40.3992842,7.25262 40.2875842,7.25262 L40.2875842,7.25262 Z"></path>
+          <path d="M96.1903842,7.25262 C94.7550842,7.25262 93.6091842,7.4982 92.7525842,7.98934 C91.8960842,8.48048 91.1784842,9.20429 90.5997842,10.1608 L90.5997842,7.6736 C90.5997842,7.56195 90.5553842,7.45488 90.4763842,7.37593 C90.3974842,7.29698 90.2903842,7.25262 90.1787842,7.25262 L85.6944842,7.25262 C85.5828842,7.25262 85.4757842,7.29698 85.3967842,7.37593 C85.3178842,7.45488 85.2734842,7.56195 85.2734842,7.6736 L85.2734842,26.2481 C85.2734842,26.3597 85.3178842,26.4668 85.3967842,26.5457 C85.4757842,26.6247 85.5828842,26.669 85.6944842,26.669 L90.1787842,26.669 C90.2903842,26.669 90.3974842,26.6247 90.4763842,26.5457 C90.5553842,26.4668 90.5997842,26.3597 90.5997842,26.2481 L90.5997842,17.1347 C90.5997842,15.5804 90.9522842,14.3515 91.6572842,13.4478 C92.3622842,12.5441 93.4702842,12.0908 94.9812842,12.088 L96.6761842,12.088 C96.7877842,12.088 96.8948842,12.0436 96.9738842,11.9647 C97.0527842,11.8857 97.0971842,11.7787 97.0971842,11.667 L97.0971842,7.6736 C97.0971842,7.56195 97.0527842,7.45488 96.9738842,7.37593 C96.8948842,7.29698 96.7877842,7.25262 96.6761842,7.25262 L96.1903842,7.25262 Z"></path>
+          <path d="M19.6889842,14.4868 C18.9386842,13.4868 17.9250842,12.7152 16.7614842,12.2581 C15.5524842,11.7669 14.0649842,11.3577 12.2991842,11.0305 C10.5624842,10.7033 9.27819419,10.4198 8.44633419,10.1801 C7.61447419,9.94045 6.97374419,9.62584 6.52414419,9.23629 C6.07116419,8.84338 5.84439419,8.29554 5.84383419,7.59279 C5.84383419,6.6105 6.22159419,5.85498 6.97711419,5.32623 C7.73263419,4.79748 8.74017419,4.53311 9.99978419,4.53311 C11.3594842,4.53311 12.4312842,4.90778 13.2833842,5.57209 C14.3619842,6.40984 14.8662842,7.23832 15.0834842,7.70309 C15.1304842,7.80201 15.2142842,7.87872 15.3168842,7.91692 C15.4195842,7.95512 15.5330842,7.9518 15.6332842,7.90768 L19.5399842,6.18587 C19.6411842,6.1424 19.7211842,6.06102 19.7630842,5.95919 C19.8049842,5.85736 19.8052842,5.74318 19.7639842,5.64113 C19.5409842,5.07428 19.2491842,4.53701 18.8950842,4.0414 C18.0008842,2.78239 16.7794842,1.79422 15.2308842,1.07687 C13.6821842,0.359517 11.9384842,0.000561306 9.99978419,0 C8.11039419,0 6.41665419,0.346326 4.91852419,1.03898 C3.42039419,1.73163 2.24951419,2.6822 1.40587419,3.89069 C0.563911195,5.09975 0.142931195,6.47214 0.142931195,8.00787 C0.142931195,9.69628 0.514235195,11.0502 1.25684419,12.0695 C1.99363419,13.0849 2.99238419,13.8811 4.14644419,14.3731 C5.33024419,14.8901 6.79104419,15.311 8.52884419,15.636 C10.2907842,15.9885 11.5938842,16.2846 12.4380842,16.5243 C13.2822842,16.764 13.9350842,17.0935 14.3964842,17.5128 C14.8628842,17.9287 15.0958842,18.49 15.0952842,19.1967 C15.0952842,20.2037 14.6742842,20.9895 13.8323842,21.5542 C12.9903842,22.1188 11.9014842,22.402 10.5655842,22.4037 C8.95319419,22.4037 7.67762419,21.9878 6.69253419,21.214 C5.68218419,20.4226 5.01450419,19.2497 4.72066419,18.6612 C4.67261419,18.5639 4.58887419,18.489 4.48691419,18.452 C4.38495419,18.415 4.27264419,18.4187 4.17339419,18.4625 L0.251544195,20.1885 C0.154629195,20.2311 0.0773267946,20.3087 0.0350402946,20.4057 C-0.00724630542,20.5028 -0.0114120254,20.6122 0.0233731946,20.7122 C0.260254195,21.3628 0.578819195,21.9807 0.971419195,22.551 C1.90262419,23.9105 3.19363419,24.9745 4.84443419,25.7429 C6.49523419,26.5113 8.37785419,26.8953 10.4922842,26.8947007 C12.4568842,26.8947007 14.2249842,26.5299 15.7966842,25.8002 C17.3682842,25.0705 18.5961842,24.0694 19.4801842,22.7969 C20.3608842,21.5255 20.8014842,20.0838 20.8020849,18.4717 C20.8026842,16.8097 20.4315842,15.4814 19.6889842,14.4868 Z"></path>
+          <path d="M61.6539842,11.7479 C60.8855842,10.2363 59.8277842,9.07071 58.4806842,8.2512 C57.1335842,7.43169 55.5899842,7.0225 53.8498842,7.02361771 C52.5145842,7.02361771 51.3371842,7.288 50.3178842,7.81675 C49.4053842,8.28162 48.6018842,8.93476 47.9603842,9.73305 L47.9603842,7.66772 C47.9603842,7.55607 47.9160842,7.44899 47.8370842,7.37004 C47.7581842,7.2911 47.6510842,7.24674 47.5393842,7.24674 L43.0551842,7.24674 C42.9434842,7.24674 42.8363842,7.2911 42.7574842,7.37004 C42.6784842,7.44899 42.6341842,7.55607 42.6341842,7.66772 L42.6341842,33.5782 C42.6341842,33.6481 42.6516842,33.7168 42.6848842,33.7783 C42.7181842,33.8398 42.7661842,33.892 42.8246842,33.9302 C42.8831842,33.9685 42.9501842,33.9916 43.0198842,33.9975 C43.0894842,34.0033 43.1594842,33.9917 43.2235842,33.9638 L47.7077842,31.9877 C47.7828842,31.955 47.8466842,31.901 47.8915842,31.8326 C47.9364842,31.7641 47.9603842,31.684 47.9603842,31.6021 L47.9603842,24.2139 C49.3709842,26.0022 51.3225842,26.8961 53.8153842,26.8955 C55.5554842,26.8955 57.1043842,26.4864 58.4621842,25.668 C59.8199842,24.8496 60.8838842,23.6975 61.6539842,22.2117 C62.4235842,20.7254 62.8083842,18.9876 62.8083842,16.9983 C62.8083842,15.009 62.4235842,13.2589 61.6539842,11.7479 Z M56.0819842,20.9841 C55.2000842,22.0287 54.0415842,22.5513 52.6063842,22.5519004 C51.1710842,22.5524 50.0251842,22.036 49.1685842,21.0027 C48.3131842,19.9704 47.8851842,18.6107 47.8845842,16.9234 C47.8845842,15.2614 48.3128842,13.9201 49.1694842,12.8997 C50.0259842,11.8792 51.1716842,11.3681 52.6063842,11.3664 C54.0415842,11.3664 55.2000842,11.8764 56.0819842,12.8963 C56.9637842,13.9162 57.4043842,15.2585 57.4037848,16.9234 C57.4037848,18.5854 56.9631842,19.939 56.0819842,20.9841 L56.0819842,20.9841 Z"></path>
+          <path d="M109.008184,0.452972 C108.285184,0.452972 108.194184,0.452972 107.914184,0.469812 C107.691184,0.473322 107.472184,0.515194 107.264184,0.59358 C107.086184,0.660015 106.925184,0.764633 106.792184,0.900053 C106.657184,1.03333 106.552184,1.19451 106.485184,1.37239 C106.407184,1.57909 106.365184,1.79746 106.361184,2.01817 C106.348184,2.30276 106.345184,2.39285 106.345184,3.11693 C106.345184,3.84102 106.345184,3.93026 106.361184,4.21148 C106.365184,4.4322 106.407184,4.65056 106.485184,4.85726 C106.552184,5.0352 106.657184,5.19694 106.791184,5.33198 C106.925184,5.46702 107.086184,5.57235 107.264184,5.64113 C107.471184,5.71907 107.689184,5.76121 107.910184,5.76574 C108.194184,5.77836 108.285184,5.78173 109.005184,5.78173 C109.725184,5.78173 109.819184,5.78173 110.099184,5.76574 C110.320184,5.76112 110.539184,5.71899 110.746184,5.64113 C110.923184,5.5729 111.084184,5.46835 111.218184,5.33422 C111.352184,5.20008 111.457184,5.03932 111.525184,4.86231 C111.602184,4.6555 111.644184,4.4372 111.649184,4.21653 C111.661184,3.93195 111.665184,3.84186 111.665184,3.12198 C111.665184,2.40211 111.665184,2.30781 111.649184,2.02323 C111.644184,1.80255 111.602184,1.58426 111.525184,1.37744 C111.458184,1.19956 111.353184,1.03838 111.217184,0.905105 C111.084184,0.769875 110.924184,0.665287 110.746184,0.598631 C110.539184,0.52077 110.320184,0.478909 110.099184,0.474863 C109.822184,0.45634 109.731184,0.452972 109.008184,0.452972 Z"></path>
+          <path d="M106.337184,9.87786 L106.337184,26.2481 C106.337184,26.3597 106.382184,26.4668 106.461184,26.5458 C106.540184,26.6247 106.647184,26.6691 106.758184,26.6691 L111.243184,26.6691 C111.354184,26.6691 111.461184,26.6247 111.540184,26.5458 C111.619184,26.4668 111.664184,26.3597 111.664184,26.2481 L111.664184,7.90178 C111.664184,7.8319 111.646184,7.76312 111.613184,7.70166 C111.580184,7.6402 111.532184,7.58798 111.473184,7.54972 C111.415184,7.51146 111.348184,7.48836 111.278184,7.4825 C111.208184,7.47664 111.138184,7.48821 111.074184,7.51616 L106.590184,9.49224 C106.515184,9.52499 106.451184,9.57891 106.406184,9.64741 C106.361184,9.7159 106.337184,9.79598 106.337184,9.87786 L106.337184,9.87786 Z"></path>
+          <path d="M98.8340842,2.84835 L98.8340842,26.2481 C98.8340842,26.3597 98.8784842,26.4668 98.9573842,26.5458 C99.0363842,26.6247 99.1433842,26.6691 99.2550842,26.6691 L103.739184,26.6691 C103.851184,26.6691 103.958184,26.6247 104.037184,26.5458 C104.116184,26.4668 104.160184,26.3597 104.160184,26.2481 L104.160184,0.87227 C104.160184,0.802388 104.143184,0.733614 104.109184,0.672151 C104.076184,0.610689 104.028184,0.558472 103.970184,0.520211 C103.911184,0.48195 103.844184,0.458848 103.774184,0.45299 C103.705184,0.447131 103.635184,0.4587 103.571184,0.486653 L99.0866842,2.46273 C99.0116842,2.49548 98.9477842,2.5494 98.9028842,2.6179 C98.8580842,2.68639 98.8341842,2.76647 98.8340842,2.84835 L98.8340842,2.84835 Z"></path>
+          <path d="M139.773184,22.1738 C139.093184,22.1738 138.608184,22.0229 138.319184,21.7209 C138.030184,21.4189 137.885184,20.9277 137.885184,20.2474 L137.885184,11.7479 L141.883184,11.7479 C141.995184,11.7479 142.102184,11.7035 142.181184,11.6246 C142.260184,11.5456 142.304184,11.4385 142.304184,11.3269 L142.304184,7.67362 C142.304184,7.56197 142.260184,7.45489 142.181184,7.37594 C142.102184,7.297 141.995184,7.25264 141.883184,7.25264 L137.885184,7.25264 L137.885184,2.45853 C137.885184,2.38872 137.867184,2.32004 137.834184,2.25869 C137.800184,2.19734 137.752184,2.14524 137.694184,2.10708 C137.636184,2.06891 137.569184,2.04589 137.499184,2.04007 C137.429184,2.03425 137.359184,2.04583 137.295184,2.07375 L132.810184,4.04983 C132.735184,4.08252 132.671184,4.13631 132.626184,4.20464 C132.581184,4.27297 132.557184,4.35287 132.557184,4.4346 L132.557184,21.1163 C132.557184,24.821 134.409184,26.6719 138.114184,26.6691032 L142.112184,26.6691032 C142.224184,26.6691032 142.331184,26.6247 142.410184,26.5458 C142.489184,26.4668 142.533184,26.3597 142.533184,26.2481 L142.533184,22.5948 C142.533184,22.4832 142.489184,22.3761 142.410184,22.2971 C142.331184,22.2182 142.224184,22.1738 142.112184,22.1738 L139.773184,22.1738 Z"></path>
+          <path d="M129.084184,16.3753 C127.686184,15.558 125.678184,14.9967 123.059184,14.6914 C121.824184,14.5651 120.942184,14.4528 120.414184,14.3546 C119.886184,14.2563 119.458184,14.0927 119.130184,13.8637 C118.803184,13.6364 118.638184,13.2971 118.638184,12.8433 C118.638184,12.214 118.947184,11.7105 119.565184,11.3328 C120.182184,10.955 120.994184,10.7661 122.000184,10.7661 C122.935184,10.7557 123.855184,10.9971 124.664184,11.465 C125.506184,11.9466 125.967184,12.4416 126.192184,12.7388 C126.249184,12.8144 126.330184,12.8684 126.421184,12.8923 C126.513184,12.9161 126.610184,12.9083 126.697184,12.8702 L130.025184,11.4035 C130.078184,11.3804 130.125184,11.3466 130.165184,11.3044 C130.204184,11.2621 130.234184,11.2123 130.253184,11.1579 C130.273184,11.1035 130.280184,11.0457 130.276184,10.9882 C130.272184,10.9306 130.256184,10.8745 130.230184,10.8234 C129.789184,9.97357 129.130184,9.24921 128.252184,8.65029 C126.628184,7.54228 124.495184,6.97564 121.853184,6.95038 C120.216184,6.95038 118.768184,7.21475 117.509184,7.7435 C116.251184,8.27225 115.275184,9.0216 114.581184,9.99153 C113.888184,10.9615 113.542184,12.0757 113.543182,13.3341 C113.543182,14.5926 113.883184,15.6001 114.563184,16.3567 C115.243184,17.1123 116.149184,17.6663 117.282184,18.0188 C118.415184,18.3713 119.838184,18.6609 121.551184,18.8877 C122.807184,19.0375 123.714184,19.1686 124.271184,19.2809 C124.825184,19.3937 125.254184,19.5772 125.556184,19.8281 C125.858184,20.079 126.009184,20.4579 126.009184,20.9614 C126.009184,21.6417 125.682184,22.1643 125.027184,22.5291 C124.373184,22.894 123.479184,23.0767 122.345184,23.0773 C121.161184,23.0773 120.221184,22.7683 119.437184,22.2841 C118.510184,21.7108 118.012184,21.1121 117.780184,20.7686 C117.724184,20.6872 117.642184,20.6276 117.548184,20.6004 C117.453184,20.5732 117.352184,20.58 117.262184,20.6196 L113.915184,22.0905 C113.864184,22.1131 113.817184,22.1458 113.779184,22.1867 C113.740184,22.2275 113.710184,22.2757 113.690184,22.3284 C113.671184,22.381 113.662184,22.4371 113.664184,22.4933 C113.666184,22.5495 113.680184,22.6046 113.704184,22.6554 C114.150184,23.6097 114.850184,24.425 115.804184,25.1013 C117.488184,26.2975 119.678184,26.8956 122.376184,26.8956 C124.116184,26.8956 125.646184,26.6373 126.965184,26.1209 C128.285184,25.6045 129.318184,24.8681 130.066184,23.9116 C130.808184,22.9541 131.180184,21.846 131.180184,20.5876 C131.180184,18.5983 130.481184,17.1942 129.084184,16.3753 Z"></path>
+        </svg>        
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item" data-active="false">
+            <a href="/#manifesto" class="header__list-item-link" data-scroll-target="manifesto">Manifesto</a>
+          </li>
+          <li class="header__list-item" data-active="false">
+            <a href="/#team" class="header__list-item-link" data-scroll-target="team">Team</a>
+          </li>
+          <li class="header__list-item" data-active="false">
+            <a href="/#news" class="header__list-item-link" data-scroll-target="news">News</a>
+          </li>
+          <li class="header__list-item" data-active="false">
+            <a href="/#jobs" class="header__list-item-link" data-scroll-target="jobs">Jobs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__col header__pill-wrap">
+      <button class="header__pill p3" aria-label="Toggle newsletter signup form" aria-expanded="false" aria-controls="side-panel">
+        <div class="header__pill-label" data-type="chars">Get notified</div>
+        <div class="header__canvas-wrap">
+          <canvas id="header-button-canvas"></canvas>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <aside id="side-panel" class="header__panel">
+    <div class="header__panel-container">
+      <div class="header__panel-wrapper">
+        <p class="header__panel-title h1" data-type="chars">Be the <br>first to <br>know.</p>
+        <form class="header__panel-form js-header-form">
+          <input class="header__panel-input p2 js-form-input" placeholder="Your email address" name="email" type="email" aria-label="Email" aria-required="true" required="">
+          <button class="header__panel-button" type="submit" aria-label="Subscribe">
+            <svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>            
+          </button>
+          <div class="header__panel-form-message">
+            <span class="pill pill--green js-form-success">Super, we'll be in touch</span>
+            <span class="pill pill--red js-form-error">Error</span>
+          </div>
+        </form>
+        <p class="header__panel-message">We are commited to protecting your data;<br role="none"> learn how in our <a href="/privacy.html" title="Privacy Policy" target="_blank" aria-label="View our Privacy Policy"><span aria-hidden="true">Privacy Policy</span></a>.</p>
+      </div>
+    </div>
+  </aside>
+  <div class="header__overlay" aria-label="Toggle newsletter signup form" aria-expanded="false" aria-controls="side-panel"></div>
+</header>
+
+
+    <div class="bookmark" dom2webgl="c:Bookmark"></div>
+
+    <div class="background" data-component="background">
+      <div data-background="hero"></div>
+      <div data-background="hero-fade"></div>
+      <div data-background="manifesto"></div>
+      <div data-background="founders"></div>
+      <div data-background="news"></div>
+      <div data-background="jobs"></div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+
+    <main class="asscroll-container">
+      <div class="asscroll-wrapper">
+        <section id="hero" class="hero" data-visible="false" data-inview="" data-callback="HERO_INVIEW" data-component="hero">
+  <h1 class="hero__title" data-type="chars">Supercharged<br> productivity</h1>
+  <h2 class="hero__subtitle p2" data-type="lines">We're building the productivity tool of the future:<br> for teams and individuals alike.</h2> 
+  <button class="hero__scroll" aria-label="Scroll down" aria-hidden="true">
+    <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 1L7 16.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M13 10.5L7 16.5L0.999998 10.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>    
+  </button>
+</section>
+        <section id="manifesto" class="manifesto section" data-inview="" data-component="manifesto" data-callback="MANIFESTO_INVIEW">
+  <div class="container">
+    <div class="cols">
+      <div class="col col-m--18 col-tl--8 manifesto__title-col">
+        <div class="js-manifesto-title">
+          <h2 id="manifesto-title" class="h3 h3--l manifesto__title" data-component="splitter" data-type="chars">We're building the<br>future of to-do's.</h2>
+        </div>
+        <div class="manifesto__animation js-manifesto-animation" dom2webgl="c:Manifesto"></div>
+      </div>
+
+      <div class="col col-m--18 col-tl--5 manifesto__copy-col">
+        <div class="manifesto__copy-wrapper">
+          <h3 class="manifesto__copy-title h5">Built for teams,<br role="none"> made for people</h3>
+          <p class="manifesto__copy-content">Being productive is not the essence of why we work hard. The level of productivity is a proxy to something else, something we all long for. As humans, we give our 100% to get recognition, to feel a true sense of accomplishment, or to be proud of our achievements.
+            Yet many tools focus on showing you an endless list of things you <i>didn’t</i> do — instead of letting you celebrate your triumphs.
+            <br role="none">
+            At Superlist, we take a different stance. We want to help you be productive, so you can end your day happy and proud. Since productivity is a feeling, we design Superlist to make it a positive one.
+          </p>
+        </div>
+        <div class="manifesto__copy-wrapper">
+          <h3 class="manifesto__copy-title h5">Focus on you</h3>
+          <p class="manifesto__copy-content">You are unique, and so is the way your brain takes in and processes information. Superlist embraces your uniqueness with a structure that allows you to slice and dice your tasks and lists any way you want. Your colleagues, in turn, can organize their data in a way that feels most intuitive to them.</p>
+        </div>
+        <div class="manifesto__copy-wrapper">
+          <h3 class="manifesto__copy-title h5">Private by design</h3>
+          <p class="manifesto__copy-content">The things you want to accomplish are personal. You need a tool that keeps your thoughts and ideas private — until you decide to share them with others. That’s why we are private by design, putting you in control of what is shared and not limiting the people you can share with. </p>
+        </div>
+        <div class="manifesto__copy-wrapper">
+          <h3 class="manifesto__copy-title h5">Highly collaborative</h3>
+          <p class="manifesto__copy-content">Once you feel ready to work with others, you need immediate access to the full power of a modern productivity tool. Chat, voice, video, data; synchronous or asynchronous. Superlist offers endless options to solve challenges together. And it ensures the results of your work are collected and stored in one place.</p>
+        </div>
+        <div class="manifesto__copy-wrapper">
+          <h3 class="manifesto__copy-title h5">Work smarter, your way</h3>
+          <p class="manifesto__copy-content">We all have routines. We have different tools we use for work, to communicate, and to schedule meetings. Superlist is designed to build on and integrate with those existing tools. We enhance your routines rather than asking you to change them. We’re always at hand, but never in your way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="team" class="founders section" data-inview="" data-callback="FOUNDERS_INVIEW" data-component="founders">
+  <div class="rectangle rectangle--g"></div>
+
+  <div class="container">
+    <div class="cols founders__cols" data-component="founders-slider">
+      <div class="col col-m--18 founders__col founders__col--title">
+        <h2 id="founders-title" class="founders__title" data-component="splitter" data-wait="" data-type="chars">Founders
+        </h2>
+      </div>
+      <div class="col col-m--18 col-tl--8 founders__col">
+        <div class="founders__list-wrapper">
+          <ul class="founders__list build-on" data-anim="false">
+            <li class="founders__list-item h5 js-name-wrapper target" data-id="0" data-active="false" role="button">
+              <div class="founders__list-item-label js-name">Brandon Arnold</div>
+              <span class="founders__list-item-divider"></span>
+            </li>
+            <li class="founders__list-item h5 js-name-wrapper target" data-id="1" data-active="false" role="button">
+              <div class="founders__list-item-label js-name">Marcel Käding</div>
+              <span class="founders__list-item-divider"></span>
+            </li>
+            <li class="founders__list-item h5 js-name-wrapper target" data-id="2" data-active="false" role="button">
+              <div class="founders__list-item-label js-name">Steffen Kiedel</div>
+              <span class="founders__list-item-divider"></span>
+            </li>
+            <li class="founders__list-item h5 js-name-wrapper target" data-id="3" data-active="false" role="button">
+              <div class="founders__list-item-label js-name">Ben Kubota</div>
+              <span class="founders__list-item-divider"></span>
+            </li>
+            <li class="founders__list-item h5 js-name-wrapper target" data-id="4" data-active="false" role="button">
+              <div class="founders__list-item-label js-name">Christian Reber</div>
+              <span class="founders__list-item-divider"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="founders__images">
+        <svg class="founders__svg" viewBox="0 0 683 904" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="js-mask" d="M413.103 218.904L376.403 374.004C375.803 376.504 376.903 379.104 379.003 380.404L594.403 517.304C610.203 527.404 611.203 550.104 596.403 561.504L479.503 651.204L323.103 771.204C307.403 783.204 285.303 768.904 289.903 749.704L326.603 594.604C327.203 592.104 326.103 589.504 324.003 588.204L108.503 451.304C92.7025 441.204 91.7025 418.504 106.503 407.104L223.403 317.404L379.803 197.404C395.503 185.404 417.603 199.704 413.103 218.904Z" fill="#EDEDED"></path>
+
+          <mask id="mask" maskUnits="userSpaceOnUse" x="96" y="101" width="600" height="800">
+            <path class="js-mask" fill="#fff" d="M594.403 517.9L379.003 101L106.503 127.7C91.7025 139.1 92.7025 441.8 108.503 451.9L324.003 588.8C326.103 590.1 327.203 592.7 326.603 595.2L289.903 750.3C285.303 769.5 307.403 783.8 323.103 771.8L479.503 651.8L596.403 562.1C611.203 550.7 610.203 528 594.403 517.9Z"></path>
+          </mask>
+
+          <g mask="url(#mask)">
+            <rect class="founders__svg-image js-img" data-active="true" fill="url(#pattern0)" x="40" y="180" width="627" height="689"></rect>
+            <rect class="founders__svg-image js-img" data-active="false" fill="url(#pattern1)" x="40" y="180" width="627" height="689"></rect>
+            <rect class="founders__svg-image js-img" data-active="false" fill="url(#pattern2)" x="40" y="180" width="627" height="689"></rect>
+            <rect class="founders__svg-image js-img" data-active="false" fill="url(#pattern3)" x="40" y="180" width="627" height="689"></rect>
+            <rect class="founders__svg-image js-img" data-active="false" fill="url(#pattern4)" x="40" y="180" width="627" height="689"></rect>
+          </g>
+
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0" transform="scale(0.0015949 0.00145138)"></use>
+            </pattern>
+            <image id="image0" data-active="true" width="627" height="689" xlink:href="/images/brandon.png"></image>
+
+            <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image1" transform="scale(0.0015949 0.00145138)"></use>
+            </pattern>
+            <image id="image1" data-active="false" width="627" height="689" xlink:href="/images/marcel.png"></image>
+
+            <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image2" transform="scale(0.0015949 0.00145138)"></use>
+            </pattern>
+            <image id="image2" data-active="false" width="627" height="689" xlink:href="/images/steffen.png"></image>
+
+            <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image3" transform="scale(0.0015949 0.00145138)"></use>
+            </pattern>
+            <image id="image3" data-active="false" width="627" height="689" xlink:href="/images/ben.png"></image>
+
+            <pattern id="pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image4" transform="scale(0.0015949 0.00145138)"></use>
+            </pattern>
+            <image id="image4" data-active="false" width="627" height="689" xlink:href="/images/christian.png"></image>
+
+          </defs>
+        </svg>
+      </div>
+
+      <div class="col col-m--18 col-tl--5 founders__col-bio">
+        <h3 class="founders__title-bio">
+          About
+        </h3>
+        <ul class="founders__list-bio">
+          <li class="founders__list-bio-item js-bio" data-active="true" data-type="words,lines">Brandon has spent his career working for some of the world’s most well-known product design agencies. Most recently as a Design Director for <a href="https://www.metalab.co/" target="_blank" rel="noopener noreferrer">Metalab</a> Brandon led teams helping dozens of startups build products for everything from fully autonomous bao restaurants to luxury healthcare diagnostics and everything in between.</li>
+          <li class="founders__list-bio-item js-bio" data-active="false" data-type="words,lines">Marcel was one of the first employees at Wunderlist and joined Microsoft with the acquisition in 2015. As a program manager at Microsoft, he led globally distributed teams on product development and customer engagement projects.</li>
+          <li class="founders__list-bio-item js-bio" data-active="false" data-type="words,lines">Steffen joined Wunderlist as CFO shortly after the company's incorporation. He helped Christian grow and eventually sell the business to Microsoft. Following the acquisition, he became one of the managing directors at <a href="https://eyeo.com/" target="_blank" rel="noopener noreferrer">Eyeo</a>, the company behind the popular AdBlock Plus browser extension, which serves more than 150M users.</li>
+          <li class="founders__list-bio-item js-bio" data-active="false" data-type="words,lines">Ben is a serial entrepreneur with multiple exits in Germany and the U.S. He started <a href="https://themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDb</a>, the largest open-source, open-data movie database, and <a href="https://www.moviepilot.de/" target="_blank" rel="noopener noreferrer">Moviepilot</a>, the largest German entertainment website, among other ventures. He has always worked at the intersection of product and technology, often in a CTO/CPO hybrid role, with intense attention to detail.
+          </li>
+          <li class="founders__list-bio-item js-bio" data-active="false" data-type="words,lines">Christian founded Wunderlist in 2010 together with a group of friends, and was CEO of the company until Microsoft acquired it in 2015.<br><br>Since then, he invested in various other startups and founded <a href="https://pitch.com/" target="_blank" rel="noopener noreferrer">Pitch</a>, a next-generation presentation software that helps individuals create beautiful presentations with very little effort.</li>
+        </ul>
+        <div class="founders__model-wrap">
+          <div class="founders__model" dom2webgl="c:SpeechBubble"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="news" class="news section" data-inview="" data-callback="NEWS_INVIEW" data-component="news">
+  <div class="rectangle"></div>
+  <div class="container fh">
+    <div class="cols news__cols fh">
+      <h2 id="news-title" class="col news__title" data-component="splitter" data-type="chars">Read all about it</h2>
+
+      <ul class="col news__list">
+        <li class="news__list-item build-on" data-anim="false">
+          <div class="news__list-item-date target">
+            <svg width="136" height="20" viewBox="0 0 136 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.3601 6.66667H38.0515V0H25.3601V6.66667Z" fill="#646464"></path>
+              <path d="M0 0V6.66667H6.33439V20H12.6688V6.66667H19.0258V0H0Z" fill="#646464"></path>
+              <path d="M19.0259 20H38.0517V13.3333H25.3603V6.66666H19.0259V20Z" fill="#646464"></path>
+              <path d="M54.2268 5.03497H44.9062V7.80887H48.0282V16.5035H51.1049V7.80887H54.2268V5.03497Z" fill="#646464"></path>
+              <path d="M57.7334 7.71561C55.539 7.71561 53.9102 9.23076 53.9102 12.2144C53.9102 14.8485 55.2901 16.69 57.8013 16.69C59.1134 16.69 60.1767 16.3403 61.1947 15.7109L60.1088 13.8228C59.2718 14.2657 58.6836 14.4289 57.937 14.4289C57.1678 14.4289 56.6249 14.0093 56.5118 13.0536H61.4209C61.4435 12.9137 61.4435 12.7273 61.4435 12.4708C61.4662 9.27738 60.0409 7.71561 57.7334 7.71561ZM56.557 11.2121C56.6475 10.3496 57.0095 9.90675 57.6655 9.90675C58.5026 9.90675 58.7967 10.3496 58.9324 11.2121H56.557Z" fill="#646464"></path>
+              <path d="M66.8956 14.289C66.1264 14.289 65.7192 13.5897 65.7192 12.2144C65.7192 10.8625 66.0812 10.0932 66.8277 10.0932C67.4385 10.0932 67.71 10.4429 68.1172 11.2121L70.0854 9.67365C69.3615 8.46153 68.4566 7.71561 66.873 7.71561C64.2035 7.71561 62.8914 9.53379 62.8914 12.1678C62.8914 15.0583 64.3618 16.6667 66.8051 16.6667C68.2756 16.6667 69.1805 16.0839 70.1533 14.6154L68.3435 13.1468C67.8005 13.986 67.4385 14.289 66.8956 14.289Z" fill="#646464"></path>
+              <path d="M76.7592 7.71564C75.7638 7.71564 75.1756 8.06529 74.6553 8.46156V4.56879L71.7822 5.7576V16.5268H74.6553V11.6084C74.6553 10.5362 75.0173 10.2331 75.6281 10.2331C76.2163 10.2331 76.5783 10.5362 76.5783 11.6317V16.5268H79.4513V11.2588C79.4513 8.99769 78.5691 7.71564 76.7592 7.71564Z" fill="#646464"></path>
+              <path d="M86.3513 13.9161C85.0165 13.9161 84.4736 12.5175 84.4736 10.7693C84.4736 8.95108 85.0392 7.6224 86.3287 7.6224C87.3467 7.6224 87.7313 8.2984 88.1159 9.37066L90.9211 8.22847C90.1519 6.06063 89.066 4.84851 86.3287 4.84851C83.3425 4.84851 81.2385 7.08627 81.2385 10.7693C81.2385 14.1725 83.0031 16.69 86.306 16.69C88.9529 16.69 90.1972 15.2215 90.9437 13.7296L88.3421 12.3077C87.7313 13.38 87.3241 13.9161 86.3513 13.9161Z" fill="#646464"></path>
+              <path d="M95.5586 8.53146V7.90209H92.6855V16.5035H95.5586V11.8182C95.5586 10.7692 95.9885 10.4196 96.6898 10.4196C97.2554 10.4196 97.6626 10.7226 98.0245 11.1422L98.7032 8.08857C98.3639 7.87878 97.9567 7.71561 97.3458 7.71561C96.5993 7.71561 96.0337 8.04195 95.5586 8.53146Z" fill="#646464"></path>
+              <path d="M104.834 12.8205C104.834 13.8928 104.472 14.1958 103.884 14.1958C103.296 14.1958 102.934 13.8928 102.934 12.7972V7.9021H100.061V13.1702C100.061 15.4312 100.943 16.69 102.776 16.69C103.748 16.69 104.359 16.3403 104.857 15.9441V16.5268H107.73V7.92541H104.857L104.834 12.8205Z" fill="#646464"></path>
+              <path d="M114.765 7.71561C113.77 7.71561 113.182 8.06526 112.661 8.46153V7.87878H109.788V16.4802H112.661V11.5618C112.661 10.4895 113.023 10.1865 113.634 10.1865C114.222 10.1865 114.584 10.4895 114.584 11.5851V16.4802H117.457V11.2121C117.457 8.99766 116.598 7.71561 114.765 7.71561Z" fill="#646464"></path>
+              <path d="M123.158 14.289C122.389 14.289 121.982 13.5897 121.982 12.2144C121.982 10.8625 122.344 10.0932 123.068 10.0932C123.679 10.0932 123.95 10.4429 124.357 11.2121L126.326 9.67365C125.602 8.46153 124.697 7.71561 123.113 7.71561C120.444 7.71561 119.132 9.53379 119.132 12.1678C119.132 15.0583 120.602 16.6667 123.045 16.6667C124.516 16.6667 125.421 16.0839 126.394 14.6154L124.584 13.1468C124.086 13.986 123.701 14.289 123.158 14.289Z" fill="#646464"></path>
+              <path d="M133.022 7.71564C132.027 7.71564 131.439 8.06529 130.918 8.46156V4.56879L128.045 5.7576V16.5268H130.918V11.6084C130.918 10.5362 131.28 10.2331 131.891 10.2331C132.479 10.2331 132.841 10.5362 132.841 11.6317V16.5268H135.714V11.2588C135.737 8.99769 134.855 7.71564 133.022 7.71564Z" fill="#646464"></path>
+            </svg>
+          </div>
+          <h3 class="news__list-item-title h5" data-type="lines">As Wunderlist shuts down, <br>its founder announces a
+            new <br>productivity app called Superlist</h3>
+          <div class="news__list-item-button target">
+            <div class="button" data-component="button">
+              <a class="button__link" href="https://techcrunch.com/2020/05/05/as-wunderlist-shuts-down-its-founder-announces-a-new-productivity-app-called-superlist/" target="_blank" rel="noopener noreferrer" aria-label="Read article: As Wunderlist shuts down, its founder announces a new productivity app called Superlist">
+                <span class="button__label" data-type="chars" data-noclass="">Read more</span>
+                <span class="button__svg" aria-hidden="true">
+                  <svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="news__list-item build-on" data-anim="false">
+          <div class="news__list-item-date target">
+            <svg width="119" height="20" viewBox="0 0 119 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.6332 17.76C27.6332 18.36 27.4925 19.02 27.0303 19.52H39.1889V13.42C38.3448 13.8 37.2998 14 36.2949 14H33.6622V12H35.0489C35.7925 12 36.4758 12.08 37.1792 12.38V7.12C36.4557 7.42 35.7925 7.5 35.0489 7.5H33.6622V5.26H36.2949C37.2998 5.26 38.3448 5.46 39.1889 5.84V0H27.0102C27.4724 0.4 27.6332 1.14 27.6332 1.76V17.76ZM17.0823 7.5V5.5H17.3436C18.0269 5.5 18.8308 5.6 19.3533 5.88V0H10.8121V19.5H17.7053C17.2431 19.1 17.0823 18.36 17.0823 17.74V12.26H20.3581V17.76C20.3581 18.36 20.1973 19.1 19.7351 19.52H26.6484V0H20.3581V7.5H17.0823ZM2.02978 5.5H3.51695V17.76C3.51695 18.36 3.35617 19.1 2.89395 19.52H9.80727V0H0V5.88C0.542615 5.6 1.34649 5.5 2.02978 5.5ZM106.011 7.5H98.4947C98.1128 7.5 97.6707 7.46 97.2286 7.32V12.18C97.6707 12.04 98.1128 12 98.4947 12H100.484V13.5C100.243 13.72 99.7005 13.84 99.1579 13.84C96.8668 13.84 95.1988 12.04 95.1988 9.88C95.1988 7.7 96.8267 5.76 99.1177 5.76C100.504 5.76 102.052 6.22 103.76 7.02V0H98.7358C93.3097 0 88.9889 4.18 88.9889 9.82C88.9889 15.34 93.3499 20 98.9971 20C102.112 20 105.006 18.74 106.513 17.2C106.212 16.64 106.011 16.1 106.011 15.44V7.5ZM115.677 5.26C116.682 5.26 117.727 5.46 118.571 5.84V0H106.393C106.855 0.4 107.016 1.14 107.016 1.76V17.76C107.016 18.36 106.875 19.02 106.413 19.52H118.571V13.42C117.727 13.8 116.682 14 115.677 14H113.045V12H114.431C115.175 12 115.858 12.08 116.562 12.38V7.12C115.838 7.42 115.175 7.5 114.431 7.5H113.045V5.26H115.677ZM86.5371 10.7C87.5821 9.54 88.2252 8.04 88.2252 6.5C88.2252 2.02 84.869 0 81.2516 0H73.4741C73.9363 0.4 74.0971 1.14 74.0971 1.74V17.74C74.0971 18.34 73.9363 19 73.4741 19.5H80.9501C80.4879 19 80.3673 18.32 80.3673 17.74V13.78C82.5177 14.18 83.9446 16.16 83.9446 17.76C83.9446 18.36 83.8039 19.02 83.3417 19.5H90.7976C90.3354 19 90.2148 18.3 90.1746 17.7C89.9334 14.26 88.7477 11.82 86.5371 10.7ZM80.3874 8.78V5.22C81.3923 5.22 82.6785 5.5 82.6785 7C82.6785 8.5 81.3923 8.78 80.3874 8.78ZM52.9954 10.76L50.9857 5.26H54.0003L56.0099 0H41.9421C42.3843 0.44 42.7862 0.94 43.1078 1.52L50.8852 19.5H55.1257L61.5366 4.5V17.76C61.5366 18.38 61.3758 19.1 60.9136 19.52H73.0923V13.42C72.2683 13.8 71.2032 14.24 70.1983 14.24H67.5656V12H68.9523C69.716 12 70.3792 12.08 71.0826 12.38V7.12C70.3591 7.42 69.6959 7.5 68.9523 7.5H67.5656V5.5H70.1983C71.2032 5.5 72.2482 5.7 73.0923 6.08V0H57.0148L52.9954 10.76Z" fill="#646464"></path>
+            </svg>
+          </div>
+          <h3 class="news__list-item-title h5" data-type="lines">Wunderlist founder <br>announces a new productivity
+            <br>app called Superlist</h3>
+          <div class="news__list-item-button target">
+            <div class="button" data-component="button">
+              <a class="button__link" href="https://www.theverge.com/2020/5/5/21248121/wunderlist-microsoft-to-do-office365-superlist" target="_blank" rel="noopener noreferrer" aria-label="Read article: Wunderlist founder announces a new productivity app called Superlist">
+                <span class="button__label" data-type="chars" data-noclass="">Read more</span>
+                <span class="button__svg" aria-hidden="true">
+                  <svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="news__postbox-wrap">
+    <div class="news__postbox" dom2webgl="c:Postbox"></div>
+  </div>
+</section>
+        <section id="jobs" class="jobs section" data-inview="" data-callback="JOBS_INVIEW" data-component="jobs">
+  <div class="rectangle rectangle--g"></div>
+  <div class="container fw">
+    <div class="cols">
+      <div class="col col-m--17 jobs__col-title">
+        <h2 id="jobs-title" class="jobs__title" data-component="splitter" data-type="chars">Looking out for<br> super people</h2>
+      </div>
+      <div class="col col-m--18 col-tp--10 col-tl--6 jobs__col-benefits build-on" data-anim="false">
+        <h3 class="jobs__subtitle target">Benefits</h3>
+        <ul class="jobs__benefits">
+          <li class="target">• Remote-first company setup</li>
+          <li class="target">• Competitive compensation / equity package</li>
+          <li class="target">• Healthy work-life balance</li>
+          <li class="target">• Parent-friendly company culture</li>
+          <li class="target">• Educational stipend</li>
+          <li class="target">• 30-days vacation</li>
+          <li class="target">• Top-of-the-line equipment</li>
+          <li class="target">• Experienced, distributed, and diverse team</li>
+        </ul>
+        <div class="jobs__model-wrap">
+          <div class="jobs__model" dom2webgl="c:Megaphone"></div>
+        </div>
+      </div>
+      <div class="col col-m--18 col-tp--7 col-d--6 jobs__col-links build-on" data-anim="false">
+        <ul class="jobs__list">
+          <li class="jobs__list-item target">
+            <a class="jobs__list-item-link h5" href="https://superlist.recruitee.com/o/senior-backend-engineer-mfd" target="_blank" rel="noopener noreferrer" aria-label="View Senior Backend Engineer Job">
+              <span class="jobs__list-item-label" aria-hidden="true">Senior Backend Engineer</span>
+              <span class="jobs__list-item-link-svg">
+                <span class="arrow"><svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="circle"><svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="21" cy="21" r="20.5"></circle>
+                    <circle class="hover" cx="21" cy="21" r="20.5"></circle>
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="jobs__list-item target">
+            <a class="jobs__list-item-link h5" href="https://superlist.recruitee.com/o/senior-product-designer-mfd-seattle" target="_blank" rel="noopener noreferrer" aria-label="View Senior Product Designer Job">
+              <span class="jobs__list-item-label" aria-hidden="true">Senior Product Designer</span>
+              <span class="jobs__list-item-link-svg">
+                <span class="arrow"><svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="circle"><svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="21" cy="21" r="20.5"></circle>
+                    <circle class="hover" cx="21" cy="21" r="20.5"></circle>
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="jobs__list-item target">
+            <a class="jobs__list-item-link h5" href="https://superlist.recruitee.com/o/product-designer-mfd" target="_blank" rel="noopener noreferrer" aria-label="View Product Designer Job">
+              <span class="jobs__list-item-label" aria-hidden="true">Product Designer</span>
+              <span class="jobs__list-item-link-svg">
+                <span class="arrow"><svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="circle"><svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="21" cy="21" r="20.5"></circle>
+                    <circle class="hover" cx="21" cy="21" r="20.5"></circle>
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="jobs__list-item target">
+            <a class="jobs__list-item-link h5" href="https://superlist.recruitee.com/o/senior-flutter-desktop-developer-mfd" target="_blank" rel="noopener noreferrer" aria-label="View Product Marketing Manager Job">
+              <span class="jobs__list-item-label" aria-hidden="true">Senior Flutter Developer</span>
+              <span class="jobs__list-item-link-svg">
+                <span class="arrow"><svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="circle"><svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="21" cy="21" r="20.5"></circle>
+                    <circle class="hover" cx="21" cy="21" r="20.5"></circle>
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="target jobs__list-button">
+          <div class="button" data-component="button">
+            <a class="button__link" href="https://superlist.recruitee.com/" target="_blank" rel="noopener noreferrer">
+              <span class="button__label" data-type="chars" data-noclass="">View all roles</span>
+              <span class="button__svg" aria-hidden="true"><svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 7L15.5 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M9.5 1L15.5 7L9.5 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <footer class="footer" data-inview="" data-callback="FOOTER_INVIEW" data-component="footer">
+  <div class="footer__content">
+    <h5 class="h2 footer__title" data-component="splitter" data-type="chars">Stay updated</h5>
+
+    <div class="footer__form-wrapper">
+      <form class="footer__form js-footer-form" data-message="false">
+        <div class="footer__input-wrap">
+          <input class="footer__input p1 js-form-input" placeholder="Your email address" name="email" type="email" aria-label="Email" aria-required="true" required="">
+          <button type="submit" class="footer__canvas-wrap js-submit-footer-form" aria-label="Subscribe">
+            <canvas id="footer-button-canvas" class="footer__webgl-button"></canvas>
+          </button>
+        </div>
+        <div class="footer__message">
+          <p class="p3">Definitely don't press this big red button</p>
+          <span class="pill pill--green js-form-success">Super, we'll be in touch</span>
+          <span class="pill pill--red js-form-error">Error</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer__nav">
+      <div class="container footer__nav-container">
+        <div class="footer__nav-svg footer__nav-svg--tl"><svg viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.034 1.06711L11.5255 7.4563C11.5009 7.55928 11.5461 7.66639 11.6324 7.71994L20.4861 13.3594C21.1355 13.7755 21.1766 14.7106 20.5683 15.1802L15.7633 18.8753L9.33472 23.8186C8.68939 24.3129 7.781 23.7238 7.97008 22.9329L9.47858 16.5437C9.50324 16.4407 9.45803 16.3336 9.37171 16.2801L0.513899 10.6406C-0.135536 10.2245 -0.17664 9.28943 0.431692 8.81982L5.23669 5.12472L11.6653 0.181434C12.3106 -0.312894 13.219 0.276181 13.034 1.06711Z"></path>
+          </svg>
+        </div>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list-item">
+            <a class="footer__nav-link" href="https://twitter.com/SuperlistHQ" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><span aria-hidden="true">Twitter</span></a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a class="footer__nav-link" href="https://superlist.recruitee.com/" target="_blank" rel="noopener noreferrer" aria-label="Jobs"><span aria-hidden="true">Jobs</span></a>
+          </li>
+          <li class="footer__nav-list-item">
+            <div class="footer__nav-link footer__nav-link--modal-trigger" data-modal-open="false" aria-label="Open legal information modal">
+              <span class="modal__trigger">Legal</span>
+
+              <div class="modal" data-component="modal" data-open="false">
+                <button class="modal__close" aria-label="Close legal information modal">
+                  <svg version="1.1" viewBox="0 0 49 49" xml:space="preserve" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" fill="none">
+                    <g>
+                      <line x1="5" y1="44" x2="44" y2="5"></line>
+                    </g>
+                    <g>
+                      <line x1="5" y1="44" x2="44" y2="5"></line>
+                    </g>
+                    <g>
+                      <line x1="5" y1="5" x2="44" y2="44"></line>
+                    </g>
+                  </svg>
+                </button>
+                <div class="modal__inner">
+                  <h4>Superlist Software GmbH</h4>
+                  <div>
+                    <p>c/o Kubota<br>Rückerstrasse 5<br>10119 Berlin<br><a href="mailto:hello@superlist.com">hello@superlist.com</a></p>
+                  </div>
+                  <div>
+                    <h4>Managing Director</h4>
+                    <p>Steffen Kiedel, Ben Kubota</p>
+                  </div>
+                  <div>
+                    <h4>Commercial Register</h4>
+                    <p>Local Court (Amtsgericht) of Charlottenburg HRB 219633 B<br><br>We assume no liability for the
+                      content of websites linked to us. The owners of these linked websites take sole responsibility for
+                      their contents.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="footer__nav-list-item">
+            <a class="footer__nav-link" href="/privacy.html" rel="noopener noreferrer" aria-label="Privacy"><span aria-hidden="true">Privacy</span></a>
+          </li>
+          <li class="footer__nav-list-item">
+            <div class="footer__nav-label">
+              <div class="footer__nav-svg footer__nav-svg--xs"><svg viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.034 1.06711L11.5255 7.4563C11.5009 7.55928 11.5461 7.66639 11.6324 7.71994L20.4861 13.3594C21.1355 13.7755 21.1766 14.7106 20.5683 15.1802L15.7633 18.8753L9.33472 23.8186C8.68939 24.3129 7.781 23.7238 7.97008 22.9329L9.47858 16.5437C9.50324 16.4407 9.45803 16.3336 9.37171 16.2801L0.513899 10.6406C-0.135536 10.2245 -0.17664 9.28943 0.431692 8.81982L5.23669 5.12472L11.6653 0.181434C12.3106 -0.312894 13.219 0.276181 13.034 1.06711Z"></path>
+                </svg>
+              </div>
+              © Superlist 2021
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__fig-wrapper">
+        <figure class="footer__fig">
+          <img class="footer__fig-desktop" src="/images/laptop.png" alt="Superlist in use">
+          <img class="footer__fig-mobile" src="/images/phone.png" alt="Superlist in use">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bg-wrapper">
+    <div class="footer__bg-svg"><svg viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.034 1.06711L11.5255 7.4563C11.5009 7.55928 11.5461 7.66639 11.6324 7.71994L20.4861 13.3594C21.1355 13.7755 21.1766 14.7106 20.5683 15.1802L15.7633 18.8753L9.33472 23.8186C8.68939 24.3129 7.781 23.7238 7.97008 22.9329L9.47858 16.5437C9.50324 16.4407 9.45803 16.3336 9.37171 16.2801L0.513899 10.6406C-0.135536 10.2245 -0.17664 9.28943 0.431692 8.81982L5.23669 5.12472L11.6653 0.181434C12.3106 -0.312894 13.219 0.276181 13.034 1.06711Z"></path>
+      </svg>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </main>
+
+    <div class="p-cover"></div>
+
+    <audio id="click-audio" src="/audio/click.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.6.1/firebase-app.js"></script>
+<script>
+      var _rootDir = "/"
+    </script>
+  <script type="text/javascript" src="/js/manifest.js"></script><script type="text/javascript" src="/js/vendor.js"></script><script type="text/javascript" src="/js/index.js</script></body>
+</html>
